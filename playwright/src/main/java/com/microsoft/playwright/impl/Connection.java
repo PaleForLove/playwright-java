@@ -55,7 +55,7 @@ class Message {
 
 public class Connection {
   private final Transport transport;
-  private final Map<String, ChannelOwner> objects = new HashMap<>();
+  private final Map<String, ChannelOwner> objects = new java.util.concurrent.ConcurrentHashMap<>();
   private final Root root;
   final boolean isRemote;
   private int lastId = 0;
